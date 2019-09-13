@@ -1,9 +1,12 @@
-version: 2
-
-jobs:
-  build:
+version: 2.1
+executors:
+  node-browsers:
+    resource_class: medium
     docker:
       - image: circleci/node:8-stretch-browsers
+jobs:
+  build:
+    executor: node-browsers
     steps:
       - checkout
       - run: npm install

@@ -9,7 +9,7 @@ agent:
     type: e1-standard-2
   containers:
     - name: main
-      image: semaphoreci/node:10.16-browsers
+      image: semaphoreci/node:8-browsers
 blocks:
   - name: Simple example
     task:
