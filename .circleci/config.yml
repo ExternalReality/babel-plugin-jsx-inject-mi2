@@ -11,3 +11,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm test
+workflows:
+  build_and_test:
+    jobs:
+      - build
