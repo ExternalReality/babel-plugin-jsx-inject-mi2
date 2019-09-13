@@ -9,7 +9,7 @@ agent:
     type: e1-standard-2
     containers:
       - name: main
-        image: semaphoreci/node
+        image: semaphoreci/node:10.16
 blocks:
   - name: Simple example
     task:
@@ -20,13 +20,11 @@ blocks:
       - name: Checkout Code
         commands:
           - checkout
-        
+
       - name: Get Depenedencies
         commands:
           - npm install
-        
+
       - name: Run Tests
         commands:
           - npm test
-
-
