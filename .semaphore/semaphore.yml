@@ -15,10 +15,16 @@ blocks:
         - name: APP_ENV
           value: prod
       jobs:
-      - checkout
+      - name: Checkout Code
+        commands:
+          - checkout
+        
       - name: Get Depenedencies
-        commands: npm install
+        commands:
+          - npm install
+        
       - name: Run Tests
-        commands: npm test
+        commands:
+          - npm test
 
 
