@@ -15,9 +15,10 @@ blocks:
         - name: APP_ENV
           value: prod
       jobs:
-      - name: Download our code
-        commands:
-          - echo "Hello from Semaphore!"
-          - echo $APP_ENV
-          - checkout
-          - ls -alh
+      - checkout
+      - name: Get Depenedencies
+        commands: npm install
+      - name: Run Tests
+        commands: npm test
+
+
